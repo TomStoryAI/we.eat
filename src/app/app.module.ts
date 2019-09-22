@@ -13,6 +13,7 @@ import { AppComponent } from "./app.component";
 import { QuestonnaireComponent } from "./questonnaire/questonnaire.component";
 import { ResultComponent } from "./result/result.component";
 import { SidenavComponent } from "./sidenav/sidenav.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SidenavComponent } from "./sidenav/sidenav.component";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,

@@ -1,4 +1,4 @@
-enum Cluster {
+export enum ClusterEnum {
   ITALIENISCH = "italienisch",
   IMBISS = "imbiss"
 }

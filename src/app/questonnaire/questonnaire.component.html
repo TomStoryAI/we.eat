@@ -1,3 +1,6 @@
 Was solls sein?<p></p>
+<section class="example-section">
+  <mat-checkbox *ngFor="let dish of dishlist">{{ dish.name }}</mat-checkbox>
+</section>
 <button mat-raised-button color="accent" routerLink="/result">Vegetarisch</button>
 <button mat-raised-button color="accent" routerLink="/result">Fleischig</button>

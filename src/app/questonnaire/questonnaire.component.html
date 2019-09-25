@@ -2,10 +2,9 @@ Was solls sein?<p></p>
 <section class="example-section">
   <form #dishForm="ngForm">
     <div *ngFor="let dish of dishlist">
-      <mat-checkbox>{{ dish.name }}</mat-checkbox>
+      <button-choice [dish]="dish"> </button-choice>
       <p></p>
     </div>
-    <button mat-raised-button color="accent" (click)="dishForm.reset()">Nächster!</button>
   </form>
 </section>
 <button mat-raised-button color="accent" routerLink="/questionnaire">Nächster!</button>

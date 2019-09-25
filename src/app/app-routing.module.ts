@@ -6,8 +6,7 @@ import { ResultComponent } from "./result/result.component";
 const routes: Routes = [
   {
     path: "questionnaire",
-    component: QuestonnaireComponent,
-    runGuardsAndResolvers: "always"
+    component: QuestonnaireComponent
   },
   { path: "result", component: ResultComponent }
 ];

@@ -14,13 +14,15 @@ import { QuestonnaireComponent } from "./questonnaire/questonnaire.component";
 import { ResultComponent } from "./result/result.component";
 import { SidenavComponent } from "./sidenav/sidenav.component";
 import { FormsModule } from "@angular/forms";
+import { ButtonChoiceComponent } from './button-choice/button-choice.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestonnaireComponent,
     ResultComponent,
-    SidenavComponent
+    SidenavComponent,
+    ButtonChoiceComponent
   ],
   imports: [
     BrowserModule,

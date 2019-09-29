@@ -7,6 +7,7 @@ import { MatListModule } from "@angular/material/list";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
 import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatGridListModule } from "@angular/material/grid-list";
 import { AppRoutingModule } from "./app-routing.module";
 
 import { AppComponent } from "./app.component";
@@ -14,7 +15,8 @@ import { QuestonnaireComponent } from "./questonnaire/questonnaire.component";
 import { ResultComponent } from "./result/result.component";
 import { SidenavComponent } from "./sidenav/sidenav.component";
 import { FormsModule } from "@angular/forms";
-import { ButtonChoiceComponent } from './button-choice/button-choice.component';
+import { ButtonChoiceComponent } from "./button-choice/button-choice.component";
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { ButtonChoiceComponent } from './button-choice/button-choice.component';
     QuestonnaireComponent,
     ResultComponent,
     SidenavComponent,
-    ButtonChoiceComponent
+    ButtonChoiceComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { ButtonChoiceComponent } from './button-choice/button-choice.component';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

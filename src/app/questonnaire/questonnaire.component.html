@@ -1,11 +1,21 @@
-Was solls sein?<p></p>
 <section class="example-section">
-  <form #dishForm="ngForm">
-    <div *ngFor="let dish of dishlist">
-      <button-choice [dish]="dish"> </button-choice>
-      <p></p>
-    </div>
-  </form>
+
+  <div>
+    <mat-grid-list cols="4" rowHeight="50px">
+      <mat-grid-tile *ngFor="let dish of dishlist" [colspan]="1" [rowspan]="1">
+        <button-choice [dish]="dish"> </button-choice>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <p></p>
+  </div>
 </section>
-<button mat-raised-button color="accent" routerLink="/questionnaire">Nächster!</button>
-<button mat-raised-button color="accent" routerLink="/result">Fertig</button>
+<p></p>
+<hr class="style14">
+<mat-grid-list cols="2" rowHeight="50px">
+  <mat-grid-tile [colspan]="1" [rowspan]="1">
+    <button mat-raised-button color="accent" routerLink="/questionnaire">Nächster!</button>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1" [rowspan]="1">
+    <button mat-raised-button color="accent" routerLink="/result">Fertig</button>
+  </mat-grid-tile>
+</mat-grid-list>

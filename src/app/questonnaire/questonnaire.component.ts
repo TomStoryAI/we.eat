@@ -16,13 +16,24 @@ export class QuestonnaireComponent implements OnInit, OnDestroy {
   navigationSubscription;
   @ViewChild("dishForm", { static: true }) dishForm: NgForm;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.navigationSubscription = this.router.events.subscribe((e: any) => {
+      // If it is a NavigationEnd event re-initalise the component
+      if (e instanceof NavigationEnd) {
+        this.initialiseQuestionnaire();
+      }
+    });
+  }
 
   initialiseQuestionnaire() {
     console.log("RESETTING");
-    this.dishForm.reset();
+    this.dishlist = new Dishlist().getInitializedEntries();
   }
-  ngOnDestroy() {}
+  ngOnDestroy() {
+    if (this.navigationSubscription) {
+      this.navigationSubscription.unsubscribe();
+    }
+  }
   ngOnInit() {
     this.dishlist = new Dishlist().getInitializedEntries();
   }

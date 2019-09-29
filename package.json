@@ -9,7 +9,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "buildGithub": "ng build --prod --output-path docs --base-href /we.eat/"
-
   },
   "private": true,
   "dependencies": {
@@ -23,6 +22,7 @@
     "@angular/platform-browser": "^8.2.7",
     "@angular/platform-browser-dynamic": "~8.2.7",
     "@angular/router": "~8.2.7",
+    "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
     "rxjs": "^6.5.3",
     "tslib": "^1.9.0",

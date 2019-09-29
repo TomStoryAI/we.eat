@@ -1,5 +1,7 @@
-<ul>
-  <li *ngFor="let dish of resultMap | keyvalue">
-    {{dish.key}} --> {{dish.value}}
+<div class="text-center"><h2>Euer Ergebnis:</h2>
+<ul list-group>
+  <li class="list-group-item" *ngFor="let dish of resultArray">
+    {{dish[0]}} --> {{dish[1]}}
   </li>
 </ul>
+</div>

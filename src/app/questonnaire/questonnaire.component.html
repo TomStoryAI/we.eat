@@ -7,7 +7,7 @@
       <p>
       </p>
       Wähle aus der folgenden Liste:
-      <mat-grid-list cols="4" rowHeight="50px">
+      <mat-grid-list [cols]="breakpoint" rowHeight="50px">
         <mat-grid-tile *ngFor="let dish of dishlist" [colspan]="1" [rowspan]="1">
           <button-choice [dish]="dish" class="container-fluid"> </button-choice>
         </mat-grid-tile>
@@ -17,7 +17,7 @@
       <mat-grid-list cols="1" rowHeight="50px">
         <mat-grid-tile [colspan]="1" [rowspan]="1">
           <button mat-raised-button color="primary" routerLink="/questionnaire"
-            class="container-fluid w-50">Jemand anders entscheiden lassen!</button>
+            class="container-fluid w-50">Nächste Meinung!</button>
         </mat-grid-tile>
         <mat-grid-tile [colspan]="1" [rowspan]="1">
           <button mat-raised-button color="primary" routerLink="/result" class="container-fluid w-50">Zur

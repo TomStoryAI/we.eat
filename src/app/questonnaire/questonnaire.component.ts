@@ -12,6 +12,7 @@ import { MatIcon } from "@angular/material/icon";
   styleUrls: ["./questonnaire.component.scss"]
 })
 export class QuestonnaireComponent implements OnInit, OnDestroy {
+  breakpoint = 4;
   dishlist: Set<Dish>;
   navigationSubscription;
   @ViewChild("dishForm", { static: true }) dishForm: NgForm;
@@ -35,6 +36,7 @@ export class QuestonnaireComponent implements OnInit, OnDestroy {
     }
   }
   ngOnInit() {
+    this.breakpoint = (window.innerWidth <= 400) ? 1 : 4;
     this.dishlist = new Dishlist().getInitializedEntries();
   }
 }

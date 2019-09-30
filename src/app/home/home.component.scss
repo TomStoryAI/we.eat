@@ -42,9 +42,10 @@ button{
 }
 
 @media screen and (max-width: 768px) {
-  .jumbotron {
-    padding-top:200px;
-    padding-bottom:200px;
+  .jumbotron-overlay {
+    margin-top:20px;
+    background-color: rgba(102, 113, 119, 0.5);
+    height:350px !important;
   }
 }
 

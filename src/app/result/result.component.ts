@@ -34,5 +34,7 @@ export class ResultComponent implements OnInit {
     }
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }
 }

@@ -32,7 +32,7 @@ export class QuestonnaireComponent implements OnInit, OnDestroy {
     console.log("RESETTING");
     this.dishlist = new Dishlist().getInitializedEntries();
     document.body.scrollTop = document.documentElement.scrollTop = 0;
-    let matSnackBarRef = this._snackBar.open('Hunger No.'+this.counter, 'Wähle Dein Essen', {
+    let matSnackBarRef = this._snackBar.open('Hungernde No.'+this.counter, 'Wähle Dein Essen', {
       duration: 3000,
       // here specify the position
       verticalPosition: 'top'

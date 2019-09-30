@@ -2,7 +2,13 @@
   <div class="img text-center"></div>
 
     <div class="jumbotron-content text-center">
-      <h2>Euer Ergebnis:</h2>
+        <div class="text-center font-weight-bold">
+            <h2> Die nähesten Restaurants für: {{resultArray[0][0]}} </h2>
+        <iframe width="600" height="500" id="gmap_canvas"
+         [src]="urlSafe" 
+         frameborder="0"  marginheight="0" marginwidth="0"></iframe>
+        </div>
+      <h2>Euer Ergebnis im Detail:</h2>
       <ul list-group class="text-center">
         <li class="list-group-item" *ngFor="let dish of resultArray">
           {{dish[0]}} : {{dish[1]}}
@@ -12,7 +18,4 @@
 
 </div>
 
-<div class="text-center">
 
-</div>
-<p></p>

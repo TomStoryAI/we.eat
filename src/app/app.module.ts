@@ -18,7 +18,7 @@ import { SidenavComponent } from "./sidenav/sidenav.component";
 import { FormsModule } from "@angular/forms";
 import { ButtonChoiceComponent } from "./button-choice/button-choice.component";
 import { HomeComponent } from "./home/home.component";
-
+import { AgmCoreModule } from "@agm/core";
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +40,10 @@ import { HomeComponent } from "./home/home.component";
     MatListModule,
     MatCheckboxModule,
     MatGridListModule,
-    MatTableModule
+    MatTableModule,
+    AgmCoreModule.forRoot({
+      apiKey: ""
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

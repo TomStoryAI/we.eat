@@ -1,21 +1,32 @@
-<section class="example-section">
+<div class="jumbotron jumbotron-billboard text-center">
+  <div class="img text-center"></div>
 
-  <div>
-    <mat-grid-list cols="4" rowHeight="50px">
-      <mat-grid-tile *ngFor="let dish of dishlist" [colspan]="1" [rowspan]="1">
-        <button-choice [dish]="dish"> </button-choice>
-      </mat-grid-tile>
-    </mat-grid-list>
-    <p></p>
+  <div class="jumbotron jumbotron-overlay container">
+    <div class="jumbotron-content">
+      <h2>Worauf hast du Lust?</h2>
+      <p>
+      </p>
+      Wähle aus der folgenden Liste:
+      <mat-grid-list cols="4" rowHeight="50px">
+        <mat-grid-tile *ngFor="let dish of dishlist" [colspan]="1" [rowspan]="1">
+          <button-choice [dish]="dish" class="container-fluid"> </button-choice>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <p></p>
+      <hr class="style14">
+      <mat-grid-list cols="1" rowHeight="50px">
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <button mat-raised-button color="primary" routerLink="/questionnaire"
+            class="container-fluid w-50">Jemand anders entscheiden lassen!</button>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <button mat-raised-button color="primary" routerLink="/result" class="container-fluid w-50">Zur
+            Auswertung</button>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
   </div>
-</section>
-<p></p>
-<hr class="style14">
-<mat-grid-list cols="2" rowHeight="50px">
-  <mat-grid-tile [colspan]="1" [rowspan]="1">
-    <button mat-raised-button color="accent" routerLink="/questionnaire">Nächster!</button>
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="1" [rowspan]="1">
-    <button mat-raised-button color="accent" routerLink="/result">Fertig</button>
-  </mat-grid-tile>
-</mat-grid-list>
+
+
+
+</div>

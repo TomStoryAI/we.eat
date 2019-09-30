@@ -1,7 +1,20 @@
-<div class="text-center"><h2>Euer Ergebnis:</h2>
-<ul list-group>
-  <li class="list-group-item" *ngFor="let dish of resultArray">
-    {{dish[0]}} --> {{dish[1]}}
-  </li>
-</ul>
+<div class="jumbotron jumbotron-billboard text-center">
+  <div class="img text-center"></div>
+
+  <div class="jumbotron jumbotron-overlay container">
+    <div class="jumbotron-content">
+      <h2>Euer Ergebnis:</h2>
+      <ul list-group>
+        <li class="list-group-item" *ngFor="let dish of resultArray">
+          {{dish[0]}} --> {{dish[1]}}
+        </li>
+      </ul>
+    </div>
+  </div>
+
 </div>
+
+<div class="text-center">
+
+</div>
+<p></p>

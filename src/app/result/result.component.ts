@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FoodLogicService } from "../food-logic.service";
+
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
 @Component({
   selector: "app-result",
@@ -7,6 +8,9 @@ const reducer = (accumulator, currentValue) => accumulator + currentValue;
   styleUrls: ["./result.component.scss"]
 })
 export class ResultComponent implements OnInit {
+  title = "My first AGM project";
+  lat = 51.678418;
+  lng = 7.809007;
   resultMap: Map<String, number>;
   resultArray: [String, number][];
   constructor(foodLogic: FoodLogicService) {
@@ -17,10 +21,12 @@ export class ResultComponent implements OnInit {
   }
 
   sortFunction(a, b) {
-    if (a[0] === b[0]) {
+    
+    console.log(b)
+    if (a[1] === b[1]) {
       return 0;
     } else {
-      return a[0] < b[0] ? -1 : 1;
+      return a[1] > b[1] ? -1 : 1;
     }
   }
 

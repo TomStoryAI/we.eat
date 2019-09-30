@@ -36,7 +36,7 @@ export class QuestonnaireComponent implements OnInit, OnDestroy {
     }
   }
   ngOnInit() {
-    this.breakpoint = (window.innerWidth <= 400) ? 1 : 4;
+    this.breakpoint = (window.innerWidth <= 768) ? 1 : 4;
     this.dishlist = new Dishlist().getInitializedEntries();
   }
 }

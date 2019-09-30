@@ -1,51 +1,51 @@
-
-button{
-  width:100%;
+button {
+  width: 100%;
 }
 .jumbotron-billboard .img {
-    margin-bottom: 0px;
-    opacity: 0.2;
-    color: #fff;
-    background: #000 url("assets/foodsplash.jpg") top center no-repeat;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    overflow: hidden;
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:1;
+  margin-bottom: 0px;
+  opacity: 0.2;
+  color: #fff;
+  background: #000 url("assets/foodsplash.jpg") top center no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 .jumbotron-overlay {
-  margin-top:20px;
+  margin-top: 20px;
   background-color: rgba(102, 113, 119, 0.5);
-  height:250px !important;
+  height: 250px !important;
 }
 .jumbotron-content {
   font-weight: bold;
   color: #000000;
-  z-index:1;
+  z-index: 1;
 }
-.jumbotron h2 {margin-top:0;}
+.jumbotron h2 {
+  margin-top: 0;
+}
 .jumbotron {
-  position:relative;
+  position: relative;
   width: 100%;
-  height:100%;
+  height: 100%;
   background-size: cover;
 }
-.jumbotron  {
-  position:relative;
-  z-index:2;
+.jumbotron {
+  position: relative;
+  z-index: 2;
 }
 .container {
-  z-index:2
+  z-index: 2;
 }
 
 @media screen and (max-width: 768px) {
   .jumbotron-overlay {
-    margin-top:20px;
+    margin-top: 20px;
     background-color: rgba(102, 113, 119, 0.5);
-    height:350px !important;
+    height: 350px !important;
   }
 }
-

@@ -116,6 +116,8 @@ THE SOFTWARE.
 
 @angular/material/icon
 
+@angular/material/snack-bar
+
 @angular/material/toolbar
 
 @angular/platform-browser

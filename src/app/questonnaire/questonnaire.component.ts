@@ -5,6 +5,7 @@ import { Router, NavigationEnd } from "@angular/router";
 import { FormGroup, NgForm } from "@angular/forms";
 import { MatCheckboxChange, MatCheckbox } from "@angular/material/checkbox";
 import { MatIcon } from "@angular/material/icon";
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: "app-questonnaire",
@@ -16,8 +17,9 @@ export class QuestonnaireComponent implements OnInit, OnDestroy {
   dishlist: Set<Dish>;
   navigationSubscription;
   @ViewChild("dishForm", { static: true }) dishForm: NgForm;
+  counter = 1;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private _snackBar: MatSnackBar) {
     this.navigationSubscription = this.router.events.subscribe((e: any) => {
       // If it is a NavigationEnd event re-initalise the component
       if (e instanceof NavigationEnd) {
@@ -30,6 +32,13 @@ export class QuestonnaireComponent implements OnInit, OnDestroy {
     console.log("RESETTING");
     this.dishlist = new Dishlist().getInitializedEntries();
     document.body.scrollTop = document.documentElement.scrollTop = 0;
+    let matSnackBarRef = this._snackBar.open('Hunger No.'+this.counter, 'Wähle Dein Essen', {
+      duration: 3000,
+      // here specify the position
+      verticalPosition: 'top'
+    });
+    
+    this.counter++;
   }
   ngOnDestroy() {
     if (this.navigationSubscription) {

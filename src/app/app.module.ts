@@ -19,6 +19,8 @@ import { FormsModule } from "@angular/forms";
 import { ButtonChoiceComponent } from "./button-choice/button-choice.component";
 import { HomeComponent } from "./home/home.component";
 import { AgmCoreModule } from "@agm/core";
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +43,7 @@ import { AgmCoreModule } from "@agm/core";
     MatCheckboxModule,
     MatGridListModule,
     MatTableModule,
+    MatSnackBarModule,
     AgmCoreModule.forRoot({
       apiKey: ""
     })

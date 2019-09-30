@@ -29,6 +29,7 @@ export class QuestonnaireComponent implements OnInit, OnDestroy {
   initialiseQuestionnaire() {
     console.log("RESETTING");
     this.dishlist = new Dishlist().getInitializedEntries();
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
   ngOnDestroy() {
     if (this.navigationSubscription) {

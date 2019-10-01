@@ -9,7 +9,8 @@ const reducer = (accumulator, currentValue) => accumulator + currentValue;
   styleUrls: ["./result.component.scss"]
 })
 export class ResultComponent implements OnInit {
-  mapsLink = "https://www.google.com/maps/embed/v1/place?key="+environment.MapsKey+"&q=";
+  mapsLinkBase = "https://www.google.com/maps/embed/v1/place?key="+environment.MapsKey+"&q=";
+  mapsLink : string;
   urlSafe: SafeResourceUrl;
 
   lat = 51.678418;
@@ -20,7 +21,7 @@ export class ResultComponent implements OnInit {
     this.resultMap = foodLogic.getCalculatedCluster();
     this.resultArray = Array.from(this.resultMap).sort(this.sortFunction);
     console.log(this.mapsLink)
-    this.mapsLink += this.resultArray[0][0];
+    this.mapsLink = this.mapsLinkBase + this.resultArray[0][0];
     this.urlSafe= this.sanitizer.bypassSecurityTrustResourceUrl(this.mapsLink);
   }
 
@@ -32,6 +33,11 @@ export class ResultComponent implements OnInit {
     } else {
       return a[1] > b[1] ? -1 : 1;
     }
+  }
+
+  updateMap(category : string) {
+    this.mapsLink = this.mapsLinkBase + category
+    this.urlSafe= this.sanitizer.bypassSecurityTrustResourceUrl(this.mapsLink);
   }
 
   ngOnInit() {

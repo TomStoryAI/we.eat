@@ -10,7 +10,7 @@
         </div>
       <h2>Euer Ergebnis im Detail:</h2>
       <ul list-group class="text-center">
-        <li class="list-group-item" *ngFor="let dish of resultArray">
+        <li class="list-group-item" *ngFor="let dish of resultArray" onclick="updateMap(dish[0])">
           {{dish[0]}} : {{dish[1]}}
         </li>
       </ul>

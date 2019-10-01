@@ -12,9 +12,8 @@ export class ResultComponent implements OnInit {
   mapsLinkBase = "https://www.google.com/maps/embed/v1/place?key="+environment.MapsKey+"&q=";
   mapsLink : string;
   urlSafe: SafeResourceUrl;
+  category: String;
 
-  lat = 51.678418;
-  lng = 7.809007;
   resultMap: Map<String, number>;
   resultArray: [String, number][];
   constructor(foodLogic: FoodLogicService, public sanitizer: DomSanitizer) {
@@ -23,6 +22,8 @@ export class ResultComponent implements OnInit {
     console.log(this.mapsLink)
     this.mapsLink = this.mapsLinkBase + this.resultArray[0][0];
     this.urlSafe= this.sanitizer.bypassSecurityTrustResourceUrl(this.mapsLink);
+    this.category = this.resultArray[0][0];
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
 
   sortFunction(a, b) {
@@ -38,6 +39,8 @@ export class ResultComponent implements OnInit {
   updateMap(category : string) {
     this.mapsLink = this.mapsLinkBase + category
     this.urlSafe= this.sanitizer.bypassSecurityTrustResourceUrl(this.mapsLink);
+    this.category = category;
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
 
   ngOnInit() {

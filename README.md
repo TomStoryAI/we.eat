@@ -1,18 +1,13 @@
 # WeEat
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+For all the people who do not know what to eat today!
 
-## Development server
+## Running locally
+Create a new file environment.dev.ts in which you paste your google Maps API Key.
+Run `npm run start` to start the local instance. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Prod Deployment
+Run npm run buildGithub to deploy the project to Github Pages
 
 ## Running unit tests
 

@@ -3,10 +3,10 @@
 
   <div class="jumbotron jumbotron-overlay container">
     <div class="jumbotron-content">
-      <h2>Worauf hast du Lust?</h2>
+      <h2>What do you wish to eat?</h2>
       <p>
       </p>
-      Wähle aus der folgenden Liste:
+      Choose from the following list:
       <mat-grid-list [cols]="breakpoint" rowHeight="50px">
         <mat-grid-tile *ngFor="let dish of dishlist" [colspan]="1" [rowspan]="1">
           <button-choice [dish]="dish" class="container-fluid"> </button-choice>
@@ -17,11 +17,10 @@
       <mat-grid-list cols="1" rowHeight="50px">
         <mat-grid-tile [colspan]="1" [rowspan]="1">
           <button mat-raised-button color="primary" routerLink="/questionnaire"
-            class="container-fluid w-50">Nächste Meinung!</button>
+            class="container-fluid w-50">Next Opinion!</button>
         </mat-grid-tile>
         <mat-grid-tile [colspan]="1" [rowspan]="1">
-          <button mat-raised-button color="primary" routerLink="/result" class="container-fluid w-50">Zur
-            Auswertung</button>
+          <button mat-raised-button color="primary" routerLink="/result" class="container-fluid w-50">Show Results</button>
         </mat-grid-tile>
       </mat-grid-list>
     </div>

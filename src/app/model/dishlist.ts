@@ -1,76 +1,75 @@
-import { Dish } from "../model/dish";
-import { ClusterEnum } from "../model/cluster";
+import { Dish } from '../model/dish';
+import { ClusterEnum } from '../model/cluster';
 export class Dishlist {
   dishentries: Set<Dish>;
 
   constructor() {
     this.dishentries = new Set<Dish>();
   }
-  //Add Values
   getInitializedEntries(): Set<Dish> {
     this.dishentries.add(
-      new Dish("ChickenWings", new Set<ClusterEnum>([ClusterEnum.AMERIKANISCH]))
+      new Dish('Chicken Wings', new Set<ClusterEnum>([ClusterEnum.AMERIKANISCH, ClusterEnum.FASTFOOD, ClusterEnum.SNACKS]))
     );
     this.dishentries.add(
-      new Dish("Curry", new Set<ClusterEnum>([ClusterEnum.INDISCH]))
+      new Dish('Curry', new Set<ClusterEnum>([ClusterEnum.INDISCH]))
     );
     this.dishentries.add(
-      new Dish("Döner", new Set<ClusterEnum>([ClusterEnum.IMBISS]))
+      new Dish('Shawarma', new Set<ClusterEnum>([ClusterEnum.FASTFOOD]))
     );
     this.dishentries.add(
-      new Dish("Ente", new Set<ClusterEnum>([ClusterEnum.CHINESISCH]))
+      new Dish('Duck', new Set<ClusterEnum>([ClusterEnum.CHINESISCH]))
     );
     this.dishentries.add(
-      new Dish("Flammkuchen", new Set<ClusterEnum>([ClusterEnum.FRANZOESISCH]))
+      new Dish('Tarte', new Set<ClusterEnum>([ClusterEnum.FRANZOESISCH]))
     );
     this.dishentries.add(
       new Dish(
-        "Grillplatte",
+        'Griddle',
         new Set<ClusterEnum>([ClusterEnum.GRIECHISCH, ClusterEnum.STEAK])
       )
     );
     this.dishentries.add(
-      new Dish("Hamburger", new Set<ClusterEnum>([ClusterEnum.AMERIKANISCH]))
+      new Dish('Burger', new Set<ClusterEnum>([ClusterEnum.AMERIKANISCH]))
     );
     this.dishentries.add(
       new Dish(
-        "Nudeln",
+        'Pasta',
         new Set<ClusterEnum>([ClusterEnum.ITALIENISCH, ClusterEnum.CHINESISCH])
       )
     );
     this.dishentries.add(
-      new Dish("Gyros", new Set<ClusterEnum>([ClusterEnum.GRIECHISCH]))
+      new Dish('Gyros', new Set<ClusterEnum>([ClusterEnum.GRIECHISCH]))
     );
     this.dishentries.add(
       new Dish(
-        "Pommes",
-        new Set<ClusterEnum>([ClusterEnum.AMERIKANISCH, ClusterEnum.IMBISS])
+        'French Fries',
+        new Set<ClusterEnum>([ClusterEnum.AMERIKANISCH, ClusterEnum.FASTFOOD])
       )
     );
     this.dishentries.add(
-      new Dish("Pizza", new Set<ClusterEnum>([ClusterEnum.ITALIENISCH]))
+      new Dish('Pizza', new Set<ClusterEnum>([ClusterEnum.ITALIENISCH, ClusterEnum.FASTFOOD]))
     );
     this.dishentries.add(
       new Dish(
-        "Pizzabroetchen",
-        new Set<ClusterEnum>([ClusterEnum.ITALIENISCH, ClusterEnum.IMBISS])
+        'Pizza Rolls',
+        new Set<ClusterEnum>([ClusterEnum.ITALIENISCH, ClusterEnum.FASTFOOD, ClusterEnum.SNACKS])
       )
     );
     this.dishentries.add(
       new Dish(
-        "Salat",
+        'Salad',
         new Set<ClusterEnum>([ClusterEnum.ITALIENISCH, ClusterEnum.VEGETARISCH])
       )
     );
     this.dishentries.add(
-      new Dish("Steak", new Set<ClusterEnum>([ClusterEnum.STEAK]))
+      new Dish('Steak', new Set<ClusterEnum>([ClusterEnum.STEAK]))
     );
     this.dishentries.add(
-      new Dish("Sushi", new Set<ClusterEnum>([ClusterEnum.SUSHI]))
+      new Dish('Sushi', new Set<ClusterEnum>([ClusterEnum.SUSHI]))
     );
     this.dishentries.add(
       new Dish(
-        "Suppe",
+        'Soup',
         new Set<ClusterEnum>([
           ClusterEnum.SUSHI,
           ClusterEnum.VEGETARISCH,
@@ -81,7 +80,7 @@ export class Dishlist {
     );
     this.dishentries.add(
       new Dish(
-        "Wraps",
+        'Wraps',
         new Set<ClusterEnum>([
           ClusterEnum.AMERIKANISCH,
           ClusterEnum.MEXIKANISCH

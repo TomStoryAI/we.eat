@@ -3,13 +3,13 @@
 
     <div class="jumbotron-content text-center">
         <div class="text-center font-weight-bold">
-            <h2>Wie wärs denn heute mal mit: {{category}}?</h2>
+            <h2>How about some {{category}} today?</h2>
         <iframe width="100%" height="500" id="gmap_canvas"
          [src]="urlSafe" 
          frameborder="0"  marginheight="0" marginwidth="0"></iframe>
         </div>
         <p></p>
-      <h2>Ihr wollt doch ein anderes Ergebnis? Wählt aus Eurer Ergebnisliste einfach per Klick!</h2>
+      <h2>You wish for another result? Choose from your result list!</h2>
       <ul list-group class="text-center">
         <li class="list-group-item" *ngFor="let dish of resultArray" (click)="this.updateMap(dish[0])">
          <button mat-button> {{dish[0]}} : {{dish[1]}} </button>

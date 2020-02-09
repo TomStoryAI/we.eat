@@ -1,17 +1,17 @@
 
 export enum ClusterEnum {
-  AMERIKANISCH = "amerikanisch",
-  DEUTSCH = "deutsch",
-  FRANZOESISCH = "franzoesisch",
-  CHINESISCH = "chinesisch",
-  GRIECHISCH = "griechisch",
-  IMBISS = "imbiss",
-  INDISCH = "indisch",
-  ITALIENISCH = "italienisch",
-  MEXIKANISCH = "mexikanisch",
-  NACHTISCH = "nachtisch",
-  SNACKS = "snacks",
-  STEAK = "steak",
-  SUSHI = "sushi",
-  VEGETARISCH = "vegetarisch"
+  AMERIKANISCH = 'American',
+  DEUTSCH = 'German',
+  FRANZOESISCH = 'French',
+  CHINESISCH = 'Chinese',
+  GRIECHISCH = 'Greek',
+  FASTFOOD = 'Fast Food',
+  INDISCH = 'Indian',
+  ITALIENISCH = 'Italian',
+  MEXIKANISCH = 'Mexican',
+  NACHTISCH = 'Dessert',
+  SNACKS = 'Snacks',
+  STEAK = 'Steak',
+  SUSHI = 'Sushi',
+  VEGETARISCH = 'Vegetarian'
 }
